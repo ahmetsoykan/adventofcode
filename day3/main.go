@@ -57,14 +57,14 @@ func main() {
 				if char >= '0' && char <= '9' {
 					digit := int(char - '0') // Convert character to digit
 					currentBiggestDigit, currentBiggestIndex = updateCurrentBiggestDigit(currentBiggestDigit, currentBiggestIndex, digit, index)
-					fmt.Printf("[%d] currentBiggestDigit: %d, currentBiggestIndex: %d\n", i, currentBiggestDigit, currentBiggestIndex)
+					// fmt.Printf("[%d] currentBiggestDigit: %d, currentBiggestIndex: %d\n", i, currentBiggestDigit, currentBiggestIndex)
 				}
 			}
 
 			startingIndex = currentBiggestIndex + 1
 			currentJoltage = currentJoltage + fmt.Sprintf("%d", currentBiggestDigit)
 
-			fmt.Printf("joltages: %s\n", currentJoltage)
+			// fmt.Printf("joltages: %s\n", currentJoltage)
 
 			if len(currentJoltage) == expectedDigitCount {
 				_joltage, _ := strconv.Atoi(currentJoltage)
